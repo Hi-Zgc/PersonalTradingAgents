@@ -55,7 +55,7 @@ class TencentSource(DataSource):
                 "high": float(vals[33]) if vals[33] else 0.0,
                 "low": float(vals[34]) if vals[34] else 0.0,
                 "volume": int(float(vals[36])) if vals[36] else 0,
-                "turnover": float(vals[37]) if vals[37] else 0.0,
+                "turnover": float(vals[37]) * 10000 if vals[37] else 0.0,
                 "turnover_pct": float(vals[38]) if vals[38] else 0.0,
                 "pe_ttm": float(vals[39]) if vals[39] else 0.0,
                 "mcap_yi": float(vals[44]) if vals[44] else 0.0,
